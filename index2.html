@@ -1,0 +1,21 @@
+<script id="intent" type="application/json">
+{
+  "component": "video-grid",
+  "items": [
+    { "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+    { "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" },
+    { "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" },
+    { "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" },
+    { "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" }
+  ]
+}
+</script>
+
+<script type="module">
+  import { AIRuntime } from "./runtime/engine.js";
+
+  const runtime = new AIRuntime(document.getElementById("app"));
+  const intentJSON = document.getElementById("intent").textContent;
+
+  runtime.mount(intentJSON);
+</script>
